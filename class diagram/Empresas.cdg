@@ -21,7 +21,7 @@
         <Method name="mostrar" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Empleado" package="packempresa" visibility="public" xPosition="649.0" yPosition="171.0">
+    <Class name="Empleado" package="packempresa" visibility="public" xPosition="381.0" yPosition="144.0">
       <Fields>
         <Field name="sueldo_bruto" type="int" visibility="private"/>
       </Fields>
@@ -41,20 +41,27 @@
         <Method name="mostrarTelefono" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Directivo" package="packempresa" visibility="public" xPosition="411.0" yPosition="53.0">
+    <Class name="Directivo" package="packempresa" visibility="public" xPosition="95.0" yPosition="85.0">
       <Fields>
         <Field name="categoria" type="String" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods/>
     </Class>
+    <Class name="pp" package="" visibility="public" xPosition="137.0" yPosition="317.0">
+      <Fields>
+        <Field name="cosas" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="packempresa.Empleado" target="packempresa.Persona"/>
-    <HasRelation name="dirige" source="packempresa.Directivo" target="packempresa.Empleado" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
     <HasRelation name="tiene" source="packempresa.empresa" target="packempresa.Empleado" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
-    <IsRelation name="is" source="packempresa.Directivo" target="packempresa.Empleado"/>
+    <IsRelation name="is" source="packempresa.Empleado" target="packempresa.Persona"/>
     <HasRelation name="cartera" source="packempresa.empresa" target="packempresa.Cliente" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <IsRelation name="is" source="packempresa.Directivo" target="packempresa.Empleado"/>
     <IsRelation name="is" source="packempresa.Cliente" target="packempresa.Persona"/>
+    <HasRelation name="dirige" source="packempresa.Directivo" target="packempresa.Empleado" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
   </ClassDiagramRelations>
 </ClassDiagram>
